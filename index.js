@@ -3,14 +3,12 @@ import InorderProcessor from './inorder-processor.js'
 import PreorderProcessor from './preorder-processor.js'
 import PostorderProcessor from './postorder-processor.js'
 
-const numbers = [10, 7, 11, 6, 8, 1, 9, 20, 14, 22];
+const numbers = [10, 7, 11, 6, 8, 1, 9, 20, 14, 22, 21, 24];
 
 const tree = new Node()
 numbers.forEach(number => {
     tree.insert(number)
 })
-
-debugger;
 
 console.log('PREORDER TRAVERSAL: ')
 const preorderProcessor = new PreorderProcessor()
@@ -23,3 +21,5 @@ inorderProcessor.process(tree)
 console.log('POSTORDER TRAVERSAL: ')
 const postOrderProcessor = new PostorderProcessor()
 postOrderProcessor.process(tree)
+
+tree.remove(20)
